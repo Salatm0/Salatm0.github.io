@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Label – Above The Record</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Centered intro block ── */
+    .label-intro {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 56px 32px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .label-intro-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 28px;
+    }
+    .label-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .label-intro p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      margin: 0;
+    }
+
+    /* ── Merch embed ── */
+    .label-merch {
+      max-width: 1100px;
+      margin: 52px auto 80px;
+      padding: 0 32px;
+    }
+    .label-merch iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      border-radius: 24px;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .label-intro { padding: 40px 20px 0; }
+      .label-merch { padding: 0 20px; margin-bottom: 60px; }
+      .label-merch iframe { height: 360px; }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ── Centered intro ── -->
+  <div class="label-intro">
+    <img
+      class="label-intro-logo"
+      src="https://abovetherecord.com/wp-content/uploads/2024/10/BBB9EF67-E5B7-4F6B-81B6-24C1D9DF11AA.jpeg"
+      alt="Above The Record"
+    />
+    <h2>Elevating Artists</h2>
+    <p>ATR is dedicated to amplifying Black voices and urban hip-hop culture. We are committed to promoting music that reflects the richness of our heritage, fostering a community that is both for the people and by the people. Our mission goes beyond accolades; it's about preserving, celebrating, and uplifting the music that tells our stories. We honor the legacy of our ancestors and strive to keep our history alive through the transformative power of music. Together, we cultivate a vibrant culture that empowers artists and connects communities.</p>
+  </div>
+
+  <!-- ── Merch store embed ── -->
+  <div class="label-merch">
+    <iframe
+      title="Above The Record Merch store powered by Spring"
+      src="https://embed.creator-spring.com/widget?slug=atr-merch&per=29&currency=&page=1&layout=carousel-wide&theme=light"
+    ></iframe>
+  </div>
+
+</div>
+<script src="js/shared.js"></script>
+</body>
+</html>

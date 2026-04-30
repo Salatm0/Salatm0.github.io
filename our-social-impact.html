@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Social Impact – Above The Record</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Row 1: Image left / Mission+Vision right ── */
+    .impact-top {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 32px 0;
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+    }
+    .impact-top-img {
+      flex: 0 0 400px;
+      max-width: 400px;
+    }
+    .impact-top-img img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+    .impact-top-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-top: 8px;
+    }
+    .impact-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .impact-block p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      margin: 0;
+    }
+
+    /* ── Row 2: Why We Matter – dark panel ── */
+    .impact-why {
+      background: #111;
+      margin-top: 56px;
+      padding: 56px 32px;
+    }
+    .impact-why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .impact-why-inner > h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .impact-why-inner > p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      margin-bottom: 36px;
+      max-width: 760px;
+    }
+
+    /* About Us nested inside Why We Matter */
+    .impact-about {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 32px;
+    }
+    .impact-about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .impact-about p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      max-width: 760px;
+    }
+
+    /* ── Row 3: Fremont Fridays + Get Involved ── */
+    .impact-bottom {
+      max-width: 1100px;
+      margin: 56px auto 80px;
+      padding: 0 32px;
+      display: flex;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    /* Left card: dark, matches ATR dark card style */
+    .impact-fremont {
+      flex: 1;
+      background: #111;
+      border-radius: 4px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .impact-fremont h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .impact-fremont p {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.72);
+      margin: 0;
+      flex: 1;
+    }
+    .impact-fremont .btn-atr {
+      align-self: flex-start;
+    }
+
+    /* Right: Get Involved */
+    .impact-get-involved {
+      flex: 1;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .impact-get-involved h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .impact-get-involved p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      margin: 0;
+    }
+    .impact-get-involved a {
+      color: #C8A951;
+      text-decoration: underline;
+    }
+    .impact-get-involved footer p {
+      font-size: 14px;
+      color: rgba(255,255,255,.45);
+      margin-top: 8px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .impact-top,
+      .impact-bottom {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .impact-top-img {
+        flex: none;
+        max-width: 100%;
+      }
+      .impact-why { padding-left: 20px; padding-right: 20px; }
+      .impact-fremont,
+      .impact-get-involved { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ── Row 1: Image + Mission/Vision ── -->
+  <div class="impact-top">
+    <div class="impact-top-img">
+      <img
+        src="https://abovetherecord.com/wp-content/uploads/2024/10/Donation.jpg"
+        alt="Our Social Impact"
+      />
+    </div>
+
+    <div class="impact-top-text">
+      <div class="impact-block">
+        <h2>Our Mission</h2>
+        <p>Our mission is to make music accessible to all, empowering communities through its transformative power.</p>
+      </div>
+      <div class="impact-block">
+        <h2>Vision</h2>
+        <p>We envision a world where everyone has equal access to music education and opportunities, fostering stronger, more connected communities.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Row 2: Why We Matter ── -->
+  <div class="impact-why">
+    <div class="impact-why-inner">
+      <h2>Why We Matter</h2>
+      <p>In the U.S., 4.5 million young people aspire to engage with music but face obstacles. Music 4 Everybody is dedicated to breaking down these barriers so that music can reach and benefit all.</p>
+
+      <div class="impact-about">
+        <h2>About Us</h2>
+        <p>Founded in 2022 by the Marshall Law Band, we are a non-profit focused on removing barriers to music in underserved communities. We offer free events, career development opportunities for artists, and partner with major companies to support education and overcome challenges. Based in King County, we're expanding our impact across the Pacific Northwest.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Row 3: Fremont Fridays + Get Involved ── -->
+  <div class="impact-bottom">
+    <div class="impact-fremont">
+      <h4>Fremont Fridays</h4>
+      <p>Join us for a vibrant summer celebration of art, music, and community at Fremont Fridays! This is a free event—get involved and be part of the fun!</p>
+      <a class="btn-atr btn-white" href="https://www.fremontfridaysseattle.com/get-i" target="_blank">Check Us Out!</a>
+    </div>
+
+    <div class="impact-get-involved">
+      <h3>Get Involved!</h3>
+      <p>We have exciting programs launching in 2025! If you're interested in becoming an instructor, partnering with us, or joining our board, please email us at <a href="mailto:info@abovetherecord.com">info@abovetherecord.com</a>. We'd love to welcome you into our community!</p>
+      <footer><p>Thank you for your support! Together, we can elevate and empower through music.</p></footer>
+    </div>
+  </div>
+
+</div>
+<script src="js/shared.js"></script>
+</body>
+</html>

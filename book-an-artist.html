@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book An Artist – Above The Record</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Full-viewport slideshow section ── */
+    .artists-hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Two slide layers */
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active { opacity: 1; }
+
+    /* Ken Burns zoom-in */
+    @keyframes kenburns {
+      0%   { transform: scale(1);    }
+      100% { transform: scale(1.12); }
+    }
+    .slide.active {
+      animation: kenburns 5s ease-out forwards;
+    }
+
+    /* Dark overlay so text pops */
+    .artists-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+
+    /* Content sits above overlay */
+    .artists-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 32px 80px;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      gap: 0;
+    }
+
+    /* "King of Queens" top button */
+    .kq-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      margin-bottom: 44px;
+      transition: background .2s;
+    }
+    .kq-btn:hover { background: rgba(255,255,255,0.22); color: #fff; }
+
+    /* Region headings */
+    .region-heading {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin: 0 0 22px;
+    }
+
+    /* Artist name buttons grid */
+    .artist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
+      max-width: 560px;
+      margin-bottom: 40px;
+    }
+    .artist-btn {
+      display: block;
+      padding: 16px 20px;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .artist-btn:hover { color: #C8A951; }
+
+    /* Southern section */
+    .southern-wrap {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .southern-wrap .artist-btn {
+      font-size: 1.2rem;
+    }
+
+    /* For Bookings button */
+    .booking-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 3px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .booking-btn:hover { background: rgba(255,255,255,0.28); color: #fff; }
+
+    @media (max-width: 540px) {
+      .artists-content { padding: 80px 20px 60px; }
+      .artist-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <div class="artists-hero">
+    <!-- Slideshow backgrounds -->
+    <div class="slide active" id="slide-0"
+      style="background-image: url('https://abovetherecord.com/wp-content/uploads/2017/02/gHcWaeldgtQ.jpg')">
+    </div>
+    <div class="slide" id="slide-1"
+      style="background-image: url('https://abovetherecord.com/wp-content/uploads/2017/02/XUdIi04ohps.jpg')">
+    </div>
+
+    <!-- Centered content -->
+    <div class="artists-content">
+
+      <!-- Top link button -->
+      <a class="kq-btn" href="https://www.thekingsofqueen.com/" target="_blank">
+        King of Queens (Entertainers)
+      </a>
+
+      <!-- Pacific Northwest section -->
+      <p class="region-heading">Pacific Northwest Artist</p>
+      <div class="artist-grid">
+        <a class="artist-btn" href="marshall-law-band.html">Marshall Law Band</a>
+        <span class="artist-btn">OG MAMBO</span>
+        <a class="artist-btn" href="http://jangthegoon.com" target="_blank">Jang The Goon</a>
+        <span class="artist-btn">DJthe1nblk</span>
+      </div>
+
+      <!-- Southern section -->
+      <p class="region-heading">Southern Artist</p>
+      <div class="southern-wrap">
+        <span class="artist-btn">Raul Esko</span>
+        <a class="booking-btn" href="mailto:info@abovetherecord.com">For Bookings</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Slideshow: crossfade every 5 seconds, Ken Burns restarts on each slide
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    const next = slides[current];
+    // Reset animation by forcing reflow
+    next.style.animation = 'none';
+    next.offsetHeight; // reflow
+    next.style.animation = '';
+    next.classList.add('active');
+  }, 5000);
+</script>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

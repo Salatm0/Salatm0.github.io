@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Above The Record</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Two-column layout: photo left, text right */
+    .about-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 32px 0;
+      display: flex;
+      gap: 52px;
+      align-items: flex-start;
+    }
+    .about-photo {
+      flex: 0 0 360px;
+      max-width: 360px;
+    }
+    .about-photo img {
+      width: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    .about-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      margin-bottom: 16px;
+    }
+    .about-text strong { color: #fff; }
+
+    /* Stats strip */
+    .about-stats {
+      max-width: 1100px;
+      margin: 48px auto 0;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .stat-card {
+      background: #111;
+      border-radius: 4px;
+      padding: 28px 24px;
+      text-align: center;
+      border-top: 3px solid #C8A951;
+    }
+    .stat-card .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #C8A951;
+      margin-bottom: 6px;
+    }
+    .stat-card p {
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.5;
+    }
+
+    /* Mission + Vision section */
+    .about-mission {
+      max-width: 1100px;
+      margin: 48px auto 0;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .mission-card {
+      background: #111;
+      border-radius: 4px;
+      padding: 32px 28px;
+    }
+    .mission-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .mission-card p {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.65);
+    }
+
+    /* Business hours strip */
+    .about-hours {
+      max-width: 1100px;
+      margin: 48px auto 80px;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hours-card {
+      background: #111;
+      border-radius: 4px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      min-width: 240px;
+    }
+    .hours-card svg { width: 22px; height: 22px; fill: #C8A951; flex-shrink: 0; }
+    .hours-card div p:first-child {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 4px;
+    }
+    .hours-card div p:last-child {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    @media (max-width: 820px) {
+      .about-layout { flex-direction: column; padding: 40px 20px 0; gap: 28px; }
+      .about-photo { flex: none; max-width: 100%; }
+      .about-stats, .about-mission, .about-hours { padding: 0 20px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .about-mission { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      .about-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- Founder section -->
+  <div class="about-layout">
+    <div class="about-photo">
+      <img src="https://abovetherecord.com/wp-content/uploads/2024/10/E474D04B-CAD8-4210-A524-A6DA9945AFC0-1024x1024.jpeg"
+           alt="Teryn Jaziré Reché — Founder" />
+    </div>
+    <div class="about-text">
+      <h1>About Above The Record</h1>
+      <p><strong>Above the Record</strong> (ATR) is a Black-owned, woman-owned music and entertainment company founded by Teryn Jaziré Reché, based in Tacoma, WA. ATR emerged from the grassroots and independent music community, where artists historically lacked access to performance opportunities, financial support, and industry infrastructure.</p>
+      <p>ATR functions as more than a traditional label. It develops and books artists, produces dynamic live events, and delivers cutting-edge music business education. By 2026, the goal is to evolve into a full-service label — providing the infrastructure, resources, and partnerships artists need to thrive in today's global music industry.</p>
+      <p>Washington State's music and entertainment ecosystem directly employs roughly <strong>49,200 people</strong>, supporting 74,700 jobs, generating about <strong>$6.3 billion in GDP</strong> and nearly $10 billion in total economic impact. Despite this, 64% of independent musicians cite financial constraints as their top challenge, and 78% earned less than $15,000 from music in the past year.</p>
+      <p>ATR is building the infrastructure to change that — connecting talent, partners, and communities through scalable programs, strategic partnerships, and impactful live entertainment across the Pacific Northwest and beyond.</p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="about-stats">
+    <div class="stat-card">
+      <div class="stat-num">49,200</div>
+      <p>Direct jobs supported by music &amp; entertainment in Washington State</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">$6.3B</div>
+      <p>GDP generated by the music &amp; entertainment sector in WA State</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">64%</div>
+      <p>of independent musicians cite financial constraints as their top challenge</p>
+    </div>
+  </div>
+
+  <!-- Mission & Vision -->
+  <div class="about-mission">
+    <div class="mission-card">
+      <h2>Our Mission</h2>
+      <p>Above The Record is a fast-growing music and entertainment company building artists, experiences, and industry pathways that create jobs, expand opportunity, and drive sustainable growth across the music economy.</p>
+    </div>
+    <div class="mission-card">
+      <h2>Our Vision</h2>
+      <p>To grow Above The Record into a globally recognized music and entertainment enterprise — standing alongside industry leaders such as Sony Music and Warner Music Group — while building inclusive, future-forward infrastructure that shapes the next generation of artists, executives, and creative businesses.</p>
+    </div>
+  </div>
+
+  <!-- Hours + Contact -->
+  <div class="about-hours">
+    <div class="hours-card">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+      <div>
+        <p>Business Hours</p>
+        <p>Mon – Sun, 8:00 AM – 11:00 PM</p>
+      </div>
+    </div>
+    <div class="hours-card">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"/></svg>
+      <div>
+        <p>Address</p>
+        <p>1001 S Yakima Ave, Suite 1, Tacoma, WA 98405</p>
+      </div>
+    </div>
+    <div class="hours-card">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+      <div>
+        <p>Email</p>
+        <p>teryn@abovetherecord.com</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="js/shared.js"></script>
+</body>
+</html>

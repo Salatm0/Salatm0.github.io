@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer – Above The Record</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* White content area to let the Google Form show naturally */
+    .volunteer-form-area {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px 48px;
+    }
+    .volunteer-form-area iframe {
+      width: 640px;
+      max-width: 100%;
+      height: 820px;
+      border: none;
+      display: block;
+    }
+
+    /* Dark note strip below the form */
+    .volunteer-note-strip {
+      background: #111;
+      padding: 28px 40px;
+      text-align: center;
+    }
+    .volunteer-note-strip p {
+      font-size: 14.5px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.78);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .volunteer-note-strip a {
+      color: #C8A951;
+    }
+
+    @media (max-width: 600px) {
+      .volunteer-form-area { padding: 24px 12px 32px; }
+      .volunteer-form-area iframe { height: 900px; }
+      .volunteer-note-strip { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- Google Form embed -->
+  <div class="volunteer-form-area">
+    <iframe
+      src="https://docs.google.com/forms/d/1tKwSMChOgjX9KsPqjXF60gvgkXyvke2ndZ96ez79ybE/viewform?embedded=true"
+      title="Volunteer Form"
+      loading="lazy"
+    >Loading…</iframe>
+  </div>
+
+  <!-- Note strip -->
+  <div class="volunteer-note-strip">
+    <p>
+      For more information about volunteering and our initiatives, please visit:
+      <a href="index.html">www.abovetherecord.com</a>
+      Thank you for your willingness to support Above the Record! We will be in touch soon.
+    </p>
+  </div>
+
+</div>
+<script src="js/shared.js"></script>
+</body>
+</html>
